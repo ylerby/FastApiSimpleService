@@ -18,11 +18,9 @@ class Calendar:
                              new_date: str) -> bool:
         flag: bool = False
         if date not in self.dates:
-            print("1")
             return False
         else:
             for event in self.dates[date]:
-                print(event, event_name)
                 if event == event_name:
                     flag = True
                     if new_date not in self.dates:
@@ -30,7 +28,6 @@ class Calendar:
                     else:
                         self.dates[new_date].append(event_name)
         if flag is False:
-            print("3")
             return False
         self.dates[date].remove(event_name)
         if len(self.dates[date]) == 0:

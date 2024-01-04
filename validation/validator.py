@@ -59,5 +59,3 @@ class Validator:
             except ValueError:
                 return False
             return True
-
-
